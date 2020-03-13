@@ -13,8 +13,23 @@ class FakerasException(Exception):
     pass
 
 
+class ActivationFunctionNotFound(FakerasException):
+    """ 试图使用未定义或者未实现的激活函数. """
+    pass
+
+
 class BackwardBeforeForward(FakerasException):
     """ 试图在执行正向传播之前执行反向传播. """
+    pass
+
+
+class EmptyInputShape(FakerasException):
+    """ 没有指定输入张量的形状. """
+    pass
+
+
+class InitializationMethodNotFound(FakerasException):
+    """ 试图使用未定义或者未实现的权重参数初始化方法. """
     pass
 
 
