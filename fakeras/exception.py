@@ -28,8 +28,28 @@ class EmptyInputShape(FakerasException):
     pass
 
 
+class FitBeforeCompile(FakerasException):
+    """ 没有设置优化器和损失函数就开始训练网络. """
+    pass
+
+
 class InitializationMethodNotFound(FakerasException):
     """ 试图使用未定义或者未实现的权重参数初始化方法. """
+    pass
+
+
+class LossFunctionNotFound(FakerasException):
+    """ 试图使用未定义或者未实现的损失函数."""
+    pass
+
+
+class MetricNotFound(FakerasException):
+    """ 试图使用未定义或者未实现的训练过程监控指标. """
+    pass
+
+
+class OptimizerNotFound(FakerasException):
+    """ 试图使用未定义或者未实现的训练优化器. """
     pass
 
 
