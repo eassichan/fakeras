@@ -84,8 +84,10 @@ def main():
     #     for k, v in d.items():
     #         print(k, ': ', v)
     #     print('=' * 80)
-    os.makedirs(os.path.abspath(os.path.join(os.path.dirname(__file__), 'outputs')))
-    file_name = os.path.join(os.path.dirname(__file__), 'outputs', 'news.json')
+    # os.makedirs(os.path.abspath(os.path.join(os.path.dirname(__file__), 'outputs')))
+    # file_name = os.path.join(os.path.dirname(__file__), 'outputs', 'news.json')
+    os.makedirs('outputs', exist_ok=True)
+    file_name = os.path.join('outputs', 'news.json')
     with open(file_name, 'w', encoding='utf-8') as f:
         json.dump(review_pred_target, f, ensure_ascii=False, indent=4)
 

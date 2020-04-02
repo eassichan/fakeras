@@ -51,6 +51,7 @@ def main():
     print(np.argmax(y_test[indices], axis=1))
     x_to_pic = x_test[indices]
     x_to_pic = x_to_pic.reshape((10, 28, 28))
+    os.makedirs('pictures', exist_ok=True)
     for i, x in enumerate(x_to_pic):
         file = os.path.join('pictures', '%s.png' % i)
         plt.imsave(file, x)
