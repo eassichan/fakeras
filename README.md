@@ -1,5 +1,6 @@
 # fakeras
-fakeras: a faker of keras
+Fakeras: fake keras.
+深度学习框架keras的山寨版.
 
 
 ## 1. 项目背景
